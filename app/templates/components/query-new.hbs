@@ -10,7 +10,7 @@
     <div class="form-group">
       <label for="plea" class="col-sm-2 control-label">Question: <small>(Please be concise)</small></label>
       <div class="col-sm-10">
-        {{input type="text" class="form-control" value=plea id="plea"}}
+        {{input type="text" class="form-control" value=plea id="plea" }}
       </div>
     </div>
 
@@ -18,6 +18,13 @@
       <label for="details" class="col-sm-2 control-label">Details:</label>
       <div class="col-sm-10">
         {{textarea type="text" class="form-control" rows=6 value=details id="details"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tags" class="col-sm-2 control-label">Tags: <small>Comma Separated</small></label>
+      <div class="col-sm-10">
+        {{input type="text" class="form-control" value=tags id="tags"}}
       </div>
     </div>
 

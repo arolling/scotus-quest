@@ -2,7 +2,6 @@
   <div class="col-md-7">
     {{query-tile query=model}}
 
-    {{answer-new query=model submitAnswer="addAnswer"}}
     <hr>
     <div class="list-group">
       {{#each model.answers as |answer|}}
@@ -11,7 +10,13 @@
     </div>
   </div>
   <div class="col-md-5">
-    {{query-edit query=model editQuery="editQuery" delete="delete"}}
+    <div class="row">
+      {{query-edit query=model editQuery="editQuery" delete="delete"}}
+
+    </div>
+    <hr>
+    <h2>Have an Answer?</h2>
+    {{answer-new query=model submitAnswer="addAnswer"}}
 
   </div>
 </div>

@@ -7,6 +7,7 @@ export default DS.Model.extend({
   posted: DS.attr('date', {
     defaultValue() { return new Date();}
   }),
-  answers: DS.hasMany('answer', {async:true})
+  answers: DS.hasMany('answer', {async:true}),
+  tags: DS.hasMany('tag', {async:true})
 
 });
