@@ -13,8 +13,9 @@ export default Ember.Component.extend({
         plea: this.get('plea'),
         details: this.get('details')
       };
-      // var form = document.getElementById('addQueryForm');
-      // console.log(form);
+      this.set('supplicant', '');
+      this.set('plea', '');
+      this.set('details', '');
       this.set('seeQueryForm', false);
       this.sendAction('newQuery', params);
     }
