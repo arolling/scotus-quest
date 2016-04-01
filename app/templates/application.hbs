@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="jumbotron">
+  <h1>ScotusQuest</h1>
+  <h2 class="small">Your Place For Questions About the Supreme Court</h2>
+</div>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
+
+<footer>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <ul class="nav nav-pills">
+      <li role="presentation">{{#link-to 'index'}}Home{{/link-to}}</li>
+    </ul>
+  </nav>
+</footer>
