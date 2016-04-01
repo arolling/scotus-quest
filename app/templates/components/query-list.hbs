@@ -1,7 +1,7 @@
 <div class="list-group">
   {{#each queries as |query|}}
     {{#link-to 'question' query.id class="list-group-item"}}
-      {{query.plea}}
+      {{query.plea}} - asked by {{query.supplicant}}
     {{/link-to}}
   {{/each}}
 </div>

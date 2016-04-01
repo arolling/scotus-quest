@@ -4,8 +4,13 @@
   </div>
   <div class="panel-body">
     <div class="formatted">
-      {{model.details}}
+      {{bodyFormat model.details}}
     </div>
+  </div>
+  <div class="panel-footer">
+    <p>
+      Posted {{moment-from-now model.posted}} by {{model.supplicant}}
+    </p>
   </div>
 
 </div>
