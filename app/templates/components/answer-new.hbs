@@ -1,0 +1,12 @@
+<form >
+  <div class="form-group">
+    <label for="respondent">Your Name:</label>
+    {{input type="text" class="form-control" value=respondent id="respondent"}}
+  </div>
+
+  <div class="form-group">
+    <label for="response">Answer:</label>
+    {{textarea type="text" class="form-control" value=response id="response"}}
+  </div>
+  <button type="button" class="btn btn-success" {{action "addAnswer"}}>Submit Answer</button>
+</form>
