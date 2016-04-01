@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function bodyFormat(params/*, hash*/) {
+export function bodyFormat(params) {
 
   var body = Ember.Handlebars.Utils.escapeExpression(params[0]);
   body = body.replace(/\n\r?/g, '<br>');
@@ -10,4 +10,4 @@ export function bodyFormat(params/*, hash*/) {
 
 export default Ember.Helper.helper(bodyFormat);
 
-//solution found at https://gist.github.com/lagartoflojo/6090175, in the replies.
+//Modified from solution found at https://gist.github.com/lagartoflojo/6090175, in the replies.

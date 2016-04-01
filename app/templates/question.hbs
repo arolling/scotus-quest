@@ -1,16 +1,10 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 class="panel-title">{{model.plea}}</h1>
+<div class="row">
+  <div class="col-md-7">
+    {{query-tile query=model}}
   </div>
-  <div class="panel-body">
-    <div class="formatted">
-      {{bodyFormat model.details}}
-    </div>
-  </div>
-  <div class="panel-footer">
-    <p>
-      Posted {{moment-from-now model.posted}} by {{model.supplicant}}
-    </p>
-  </div>
+  <div class="col-md-5">
+    {{query-edit query=model editQuery="editQuery" delete="delete"}}
+    <hr>
 
+  </div>
 </div>

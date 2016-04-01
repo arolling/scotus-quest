@@ -13,7 +13,8 @@ export default Ember.Component.extend({
         plea: this.get('plea'),
         details: this.get('details')
       };
-      document.getElementById('addQueryForm').reset();
+      // var form = document.getElementById('addQueryForm');
+      // console.log(form);
       this.set('seeQueryForm', false);
       this.sendAction('newQuery', params);
     }

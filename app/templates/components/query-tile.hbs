@@ -1,1 +1,15 @@
-{{yield}}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">{{query.plea}}</h1>
+  </div>
+  <div class="panel-body">
+    <div class="formatted">
+      {{bodyFormat query.details}}
+    </div>
+  </div>
+  <div class="panel-footer">
+    <p>
+      Posted {{moment-from-now query.posted}} by {{query.supplicant}}
+    </p>
+  </div>
+</div>
