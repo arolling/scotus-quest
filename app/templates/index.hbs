@@ -1,1 +1,9 @@
-{{outlet}}
+<h2>Most Recent Questions:</h2>
+<div class="row">
+  <div class="col-md-7">
+    {{query-list queries=model}}
+  </div>
+  <div class="col-md-5">
+    {{query-new newQuery="addQuery"}}
+  </div>
+</div>
