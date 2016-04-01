@@ -4,7 +4,11 @@
   </div>
   <div class="panel-body">
     <div class="formatted">
-      {{bodyFormat query.details}}
+      <p>{{bodyFormat query.details}}</p>
+      <p>Tags:</p>
+      {{#each query.tags as |tag|}}
+        {{tag.words}} |
+      {{/each}}
     </div>
   </div>
   <div class="panel-footer">

@@ -4,6 +4,11 @@
     {{query-list queries=model.queries}}
   </div>
   <div class="col-md-6">
+    <div class="well well-sm">
+      {{#each model.tags as |tag|}}
+      <span class="clickable">{{tag.words}}</span><br>
+      {{/each}}
+    </div>
     {{query-new newQuery="addQuery"}}
   </div>
 </div>

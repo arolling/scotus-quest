@@ -1,7 +1,6 @@
-# Scotus-quest
+# ScotusQuest
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember web application allows users to pose or answer questions regarding the US Supreme Court. It also allows users to edit or delete questions and to tag their questions appropriately, as well as seeing a list of already used tags.
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/arolling/scotus-quest` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -51,3 +50,26 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Known Bugs
+
+This site allows tags to be added, and does not create duplicate tags, but does not currently sort by tag.
+
+## Support and contact details
+
+[E-mail me](mailto:arolling@gmail.com) with any comments or concerns.
+
+## Technologies Used
+
+* jQuery
+* JavaScript
+* Ember
+* npm
+* Bower
+* Ember-cli
+* Handlebars
+
+### License
+
+Licensed under the GPL.
+
+Copyright (c) 2016 **_Abigail Rolling_**
