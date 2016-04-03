@@ -1,10 +1,27 @@
+$salmon: #F09EAC;
+$pink: #F5C1C4;
+$lilac: #CECFD9;
+$blue: #D3e6e4;
+$yellow: #FAF2BB;
+$saffron: #FCDA5D;
+
+// color scheme "Koi no Hamburger" from colourpod.com
+
 .jumbotron {
   text-align: center;
+  background-color: $blue;
+  color: $saffron;
 }
 
 body {
   height: 100%;
   margin-bottom: 50px;
+  background-color: $lilac;
+}
+
+.navbar-default {
+  background-color: $saffron;
+  border-color: $pink;
 }
 
 .togglebtn {
@@ -13,8 +30,53 @@ body {
 
 .badge {
   float: right;
+  background-color: $saffron;
+  color: $salmon;
+  font-size: 130%;
 }
 
 .navbar-right {
   margin-right: 10px;
+}
+
+.btn-danger:hover {
+  border-color: $salmon;
+  background-color: $saffron;
+}
+
+.btn-danger {
+  background-color: $salmon;
+  border-color: $saffron;
+}
+
+.btn-primary {
+  background-color: $blue;
+  border-color: $yellow;
+  color: $salmon;
+}
+
+.btn-primary:hover {
+  background-color: $lilac;
+  border-color: $saffron;
+  color: $yellow;
+}
+
+.btn-success {
+  background-color: $saffron;
+  border-color: $blue;
+  color: $salmon;
+}
+
+.btn-success:hover {
+  background-color: $saffron;
+  border-color: $salmon;
+  color: $yellow;
+}
+
+.list-group-item {
+  background-color: $pink;
+}
+
+.well {
+  background-color: $blue;
 }
