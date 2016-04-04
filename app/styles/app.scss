@@ -1,30 +1,38 @@
-$salmon: #F09EAC;
-$pink: #F5C1C4;
-$lilac: #CECFD9;
-$blue: #D3e6e4;
-$yellow: #FAF2BB;
-$saffron: #FCDA5D;
+$darkpink: #B9425E;
+$salmon: #DB6560;
+$orange: #E79F88;
+$offwhite: #E5F4EE;
+$teal: #BEDBD1;
+$seafoam: #A3C6BA;
 
-// color scheme "Koi no Hamburger" from colourpod.com
+// color scheme "If Things Were Different" from colourpod.com
 
 .jumbotron {
   text-align: center;
-  background-color: $blue;
-  color: $salmon;
+  background-color: $offwhite;
+  color: $darkpink;
   small {
-    color: $saffron;
+    color: $seafoam;
   }
+}
+
+a {
+  color: $darkpink;
+}
+
+a:hover, a:active, a:focus {
+  color:$seafoam;
 }
 
 body {
   height: 100%;
   margin-bottom: 70px;
-  background-color: $lilac;
+  background-color: $orange;
 }
 
 .navbar-default {
-  background-color: $saffron;
-  border-color: $pink;
+  background-color: $seafoam;
+  border-color: $salmon;
 }
 
 .togglebtn {
@@ -33,8 +41,8 @@ body {
 
 .badge {
   float: right;
-  background-color: $saffron;
-  color: $salmon;
+  background-color: $seafoam;
+  color: $darkpink;
   font-size: 130%;
 }
 
@@ -43,76 +51,89 @@ body {
 }
 
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-  border-color: $salmon;
-  background-color: $saffron;
+  border-color: $darkpink;
+  background-color: $seafoam;
 }
 
 .btn-danger {
-  background-color: $salmon;
-  border-color: $saffron;
+  background-color: $darkpink;
+  border-color: $seafoam;
 }
 
 .btn-primary {
-  background-color: $blue;
-  border-color: $yellow;
-  color: $salmon;
+  background-color: $offwhite;
+  border-color: $teal;
+  color: $darkpink;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-success:active {
-  background-color: $pink;
-  border-color: $saffron;
-  color: $yellow;
+  background-color: $salmon;
+  border-color: $seafoam;
+  color: $teal;
 }
 
 .btn-success {
-  background-color: $saffron;
-  border-color: $blue;
-  color: $salmon;
+  background-color: $seafoam;
+  border-color: $offwhite;
+  color: $darkpink;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active {
-  background-color: $saffron;
-  border-color: $salmon;
-  color: $yellow;
+  background-color: $seafoam;
+  border-color: $darkpink;
+  color: $teal;
+}
+
+a.list-group-item {
+  background-color: $salmon;
+  border-color: $seafoam;
+  color: $offwhite;
 }
 
 .list-group-item {
-  background-color: $pink;
-  border-color: $blue;
+  background-color: $teal;
+  border-color: $seafoam;
+  color: $darkpink;
 }
 
 a.list-group-item:hover {
-  background-color: $yellow;
+  background-color: $teal;
+  color: $darkpink;
 }
 
 .well {
-  background-color: $blue;
+  background-color: $offwhite;
 }
 
 .nav > li > a:hover {
-  background-color: $pink;
-  color: $blue;
+  background-color: $salmon;
+  color: $offwhite;
 }
 
 .nav > li > a {
-  color: $salmon;
+  color: $darkpink;
   font-size: 120%;
   font-weight: bolder;
 }
 
 .panel-default {
   .panel-heading, .panel-footer {
-    background-color: $blue;
+    background-color: $offwhite;
   }
 
 }
 
 .panel-body{
-  background-color: $yellow;
+  background-color: $teal;
 }
 
 .btn-default {
-  border-color: $blue;
-  background-color: $yellow;
-  color: $salmon;
+  border-color: $offwhite;
+  background-color: $teal;
+  color: $darkpink;
+}
+
+.form-control {
+  background-color: $offwhite;
+  border-color: $darkpink;
 }
