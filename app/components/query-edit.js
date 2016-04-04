@@ -2,9 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   seeEditForm: false,
+  seeAddTags: false,
   actions: {
     editForm(){
       this.set('seeEditForm', true);
+    },
+    tagForm(){
+      this.set('seeAddTags', true);
+    },
+
+    addTags(query){
+      var params = this.get('newTags');
+      this.set('seeAddTags', false);
+      this.sendAction('addNewTags', query, params);
     },
 
     submitEdit(query){

@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params){
-    return this.store.findRecord('query', params.query_id);
+    return Ember.RSVP.hash({
+      query: this.store.findRecord('query', params.query_id),
+      tags: this.store.findAll('tag')
+    });
   },
   actions: {
     editQuery(query, params){
@@ -18,6 +21,34 @@ export default Ember.Route.extend({
     delete(query){
       query.destroyRecord();
       this.transitionTo('index');
+    },
+
+    addNewTags(query, params){
+      var tagArray = params.split(', ');
+      var model = this.currentModel;
+      for(var i=0; i < tagArray.length; i++){
+        var tagString = tagArray[i];
+        var tagParams = {
+          words: tagString
+        };
+        var alreadyTagged = false;
+        model.tags.forEach(function(currentTag){
+          if(currentTag.get('words') === tagString){
+            query.get('tags').addObject(currentTag);
+            alreadyTagged = true;
+            currentTag.save().then(function(){
+              query.save();
+            });
+          }
+        });
+        if(!alreadyTagged){
+          var newTag = this.store.createRecord('tag', tagParams);
+          query.get('tags').addObject(newTag);
+          newTag.save().then(function(){
+            query.save();
+          });
+        }
+      }
     },
 
     addAnswer(params){

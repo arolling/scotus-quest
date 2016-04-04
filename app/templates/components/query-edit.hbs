@@ -27,7 +27,19 @@
       </div>
     </div>
   </form>
+{{else if seeAddTags}}
+  <form>
+    <div class="form-group">
+      <label for="newTags" class="col-sm-2 control-label">Tags: <small>Comma Separated</small></label>
+      <div class="col-sm-10">
+        {{input type="text" class="form-control" value=newTags id="newTags"}}
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary togglebtn" {{action 'addTags' query}}>Add Tags</button>
+  </form>
+
 {{else}}
   <button type="button" class="btn btn-lg btn-danger togglebtn" {{action "deleteQuery" query}}>Delete Question</button>
   <button type="button" class="btn btn-lg btn-primary" {{action "editForm"}}>Edit Question</button>
+  <button type="button" class="btn btn-lg btn-default" {{action "tagForm"}}>Add Tags</button>
 {{/if}}

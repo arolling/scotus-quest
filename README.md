@@ -1,6 +1,6 @@
 # ScotusQuest
 
-This Ember web application allows users to pose or answer questions regarding the US Supreme Court. It also allows users to edit or delete questions and to tag their questions appropriately, as well as seeing a list of already used tags.
+This Ember web application allows users to pose or answer questions regarding the US Supreme Court. It also allows users to edit or delete questions and to tag their questions appropriately, as well as seeing a list of already used tags and the questions using each tag.
 
 ## Prerequisites
 
@@ -38,10 +38,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -52,7 +48,7 @@ Specify what it takes to deploy your app.
 
 ## Known Bugs
 
-This site allows tags to be added, and does not create duplicate tags, but does not currently sort by tag.
+Users can add tags after the fact but not edit or delete them.
 
 ## Support and contact details
 
@@ -60,7 +56,6 @@ This site allows tags to be added, and does not create duplicate tags, but does 
 
 ## Technologies Used
 
-* jQuery
 * JavaScript
 * Ember
 * npm
