@@ -11,6 +11,9 @@ $saffron: #FCDA5D;
   text-align: center;
   background-color: $blue;
   color: $saffron;
+  small {
+    color: $saffron;
+  }
 }
 
 body {
@@ -56,7 +59,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: $lilac;
+  background-color: $pink;
   border-color: $saffron;
   color: $yellow;
 }
@@ -75,8 +78,24 @@ body {
 
 .list-group-item {
   background-color: $pink;
+  border-color: $blue;
+}
+
+a.list-group-item:hover {
+  background-color: $yellow;
 }
 
 .well {
   background-color: $blue;
+}
+
+.nav > li > a:hover {
+  background-color: $pink;
+  color: $blue;
+}
+
+.nav > li > a {
+  color: $salmon;
+  font-size: 120%;
+  font-weight: bolder;
 }
