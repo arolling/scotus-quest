@@ -12,8 +12,6 @@ export default Ember.Route.extend({
     addQuery(params){
       var tagArray = params.tags.split(', ');
       delete params.tags;
-      console.log(tagArray);
-      console.log(params);
       var newQuestion = this.store.createRecord('query', params);
       var model = this.currentModel;
       for(var i=0; i < tagArray.length; i++){
@@ -33,7 +31,6 @@ export default Ember.Route.extend({
         });
         if(!alreadyTagged){
           var newTag = this.store.createRecord('tag', tagParams);
-          console.log(newTag);
           newQuestion.get('tags').addObject(newTag);
           newTag.save().then(function(){
             newQuestion.save();

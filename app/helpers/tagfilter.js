@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
-export function tagfilter(params/*, hash*/) {
-  return params;
+export function tagfilter(params) {
+  var query = params[0];
+  if(query.get('tags').get('length') > 0){
+    return Ember.String.htmlSafe('Tags: ');
+  }
 }
 
 export default Ember.Helper.helper(tagfilter);
+//should be named has-tags

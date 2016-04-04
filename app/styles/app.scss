@@ -10,7 +10,7 @@ $saffron: #FCDA5D;
 .jumbotron {
   text-align: center;
   background-color: $blue;
-  color: $saffron;
+  color: $salmon;
   small {
     color: $saffron;
   }
@@ -18,7 +18,7 @@ $saffron: #FCDA5D;
 
 body {
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   background-color: $lilac;
 }
 
@@ -42,7 +42,7 @@ body {
   margin-right: 10px;
 }
 
-.btn-danger:hover {
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
   border-color: $salmon;
   background-color: $saffron;
 }
@@ -58,7 +58,7 @@ body {
   color: $salmon;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus, .btn-success:active {
   background-color: $pink;
   border-color: $saffron;
   color: $yellow;
@@ -70,7 +70,7 @@ body {
   color: $salmon;
 }
 
-.btn-success:hover {
+.btn-success:hover, .btn-success:focus, .btn-success:active {
   background-color: $saffron;
   border-color: $salmon;
   color: $yellow;
@@ -98,4 +98,21 @@ a.list-group-item:hover {
   color: $salmon;
   font-size: 120%;
   font-weight: bolder;
+}
+
+.panel-default {
+  .panel-heading, .panel-footer {
+    background-color: $blue;
+  }
+
+}
+
+.panel-body{
+  background-color: $yellow;
+}
+
+.btn-default {
+  background-color: $lilac;
+  border-color: $yellow;
+
 }
