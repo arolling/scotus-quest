@@ -6,8 +6,8 @@
   <div class="col-md-6">
     <h3>Tags:</h3>
     <div class="well well-sm">
-      | {{#each model.tags as |tag|}}
-      <span class="clickable">{{tag.words}} |</span>
+      {{#each model.tags as |tag|}}
+        {{#link-to 'tagged' tag.id}} #{{tag.words}} {{/link-to}}
       {{/each}}
     </div>
     {{query-new newQuery="addQuery"}}

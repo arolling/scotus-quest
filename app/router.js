@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('question', {path: '/question/:query_id'});
+  this.route('tagged', {path: '/tagged/:tag_id'});
 });
 
 export default Router;

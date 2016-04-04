@@ -26,16 +26,20 @@ export default Ember.Route.extend({
           if(currentTag.get('words') === tagString){
             newQuestion.get('tags').addObject(currentTag);
             alreadyTagged = true;
+            currentTag.save().then(function(){
+              newQuestion.save();
+            });
           }
         });
         if(!alreadyTagged){
           var newTag = this.store.createRecord('tag', tagParams);
           console.log(newTag);
-          newTag.save();
           newQuestion.get('tags').addObject(newTag);
+          newTag.save().then(function(){
+            newQuestion.save();
+          });
         }
       }
-      newQuestion.save();
       this.transitionTo('index');
     }
   }

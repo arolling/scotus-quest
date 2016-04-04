@@ -7,7 +7,7 @@
       <p>{{bodyFormat query.details}}</p>
       <p>Tags:</p>
       {{#each query.tags as |tag|}}
-        {{tag.words}} |
+        {{#link-to 'tagged' tag.id}} #{{tag.words}} {{/link-to}}
       {{/each}}
     </div>
   </div>
