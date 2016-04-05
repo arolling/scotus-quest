@@ -110,7 +110,7 @@ a.list-group-item:hover {
   background-color: $offwhite;
 }
 
-.nav > li > a:hover {
+.nav > li > a:hover, .nav > li > a:focus {
   background-color: $salmon;
   color: $offwhite;
 }
@@ -141,4 +141,20 @@ a.list-group-item:hover {
 .form-control {
   background-color: $offwhite;
   border-color: $darkpink;
+}
+
+.x-small-tag {
+  font-size: 90%;
+}
+
+.small-tag {
+  font-size: 120%;
+}
+
+.med-tag {
+  font-size: 145%;
+}
+
+.lg-tag {
+  font-size: 170%;
 }

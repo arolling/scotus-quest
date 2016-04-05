@@ -7,7 +7,7 @@
     <h3>Tags:</h3>
     <div class="well well-sm">
       {{#each model.tags as |tag|}}
-        {{#link-to 'tagged' tag.id}} #{{tag.words}} {{/link-to}}
+        {{#link-to 'tagged' tag.id}} {{tag-cloud tag}} {{/link-to}}
       {{/each}}
     </div>
     {{query-new newQuery="addQuery"}}
