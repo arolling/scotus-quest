@@ -58,7 +58,7 @@ export default Ember.Route.extend({
       answer.save().then(function(){
         return question.save();
       });
-      this.transitionTo('question', question);
+      this.transitionTo('question');
     }
   }
 });

@@ -25,14 +25,19 @@ a:hover, a:active, a:focus {
 }
 
 body {
-  height: 100%;
-  margin-bottom: 70px;
+  // height: 100%;
+  margin-bottom: 40px;
   background-color: $orange;
 }
 
 .navbar-default {
   background-color: $seafoam;
   border-color: $salmon;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  position: sticky;
 }
 
 .togglebtn {
