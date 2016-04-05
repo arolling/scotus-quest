@@ -24,29 +24,32 @@ export default Ember.Route.extend({
     },
 
     addNewTags(query, params){
-      var tagArray = params.split(', ');
+      var poundless = params.replace(/#/gi, ', ');
+      var tagArray = poundless.split(', ');
       var model = this.currentModel;
       for(var i=0; i < tagArray.length; i++){
-        var tagString = tagArray[i];
-        var tagParams = {
-          words: tagString
-        };
-        var alreadyTagged = false;
-        model.tags.forEach(function(currentTag){
-          if(currentTag.get('words') === tagString){
-            query.get('tags').addObject(currentTag);
-            alreadyTagged = true;
-            currentTag.save().then(function(){
+        var tagString = tagArray[i].trim();
+        if (tagString !== ""){
+          var tagParams = {
+            words: tagString
+          };
+          var alreadyTagged = false;
+          model.tags.forEach(function(currentTag){
+            if(currentTag.get('words') === tagString){
+              query.get('tags').addObject(currentTag);
+              alreadyTagged = true;
+              currentTag.save().then(function(){
+                query.save();
+              });
+            }
+          });
+          if(!alreadyTagged){
+            var newTag = this.store.createRecord('tag', tagParams);
+            query.get('tags').addObject(newTag);
+            newTag.save().then(function(){
               query.save();
             });
           }
-        });
-        if(!alreadyTagged){
-          var newTag = this.store.createRecord('tag', tagParams);
-          query.get('tags').addObject(newTag);
-          newTag.save().then(function(){
-            query.save();
-          });
         }
       }
     },
